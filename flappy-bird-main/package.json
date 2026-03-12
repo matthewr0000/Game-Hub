@@ -1,0 +1,16 @@
+{
+  "name": "flappy-bird",
+  "version": "1.0.0",
+  "description": "A simple implementation of the classic Flappy Bird game using HTML5 Canvas and JavaScript.",
+  "main": "game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "canvas": "^3.1.0"
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <div class="game-container">
+            <canvas id="gameCanvas"></canvas>
+            <div id="score">Score: 0</div>
+            <div id="startMessage">Press Space to Start</div>
+            <button id="pauseButton">⏸️ Pause</button>
+        </div>
+        <div class="side-controls" style="display: none;">
+            <div class="control-group">
+                <label>Bird Speed:</label>
+                <input type="range" id="birdSpeed" min="1" max="100" value="2">
+                <span id="birdSpeedValue">2</span>
+            </div>
+            <div class="control-group">
+                <label>Pipe Count:</label>
+                <input type="number" id="pipeCount" min="1" max="1050" value="3">
+            </div>
+        </div>
+    </div>
+    <div class="color-tabs">
+        <div class="tab active" data-color="#FFD700">Yellow</div>
+        <div class="tab locked" data-color="#FF6B6B" data-required-score="10">
+            <span>Red</span>
+            <div class="lock-icon">🔒</div>
+            <div class="score-requirement">Score: 10</div>
+        </div>
+        <div class="tab locked" data-color="#4CAF50" data-required-score="20">
+            <span>Green</span>
+            <div class="lock-icon">🔒</div>
+            <div class="score-requirement">Score: 20</div>
+        </div>
+        <div class="tab locked" data-color="#2196F3" data-required-score="30">
+            <span>Blue</span>
+            <div class="lock-icon">🔒</div>
+            <div class="score-requirement">Score: 30</div>
+        </div>
+        <div class="tab locked" data-color="#FFFFFF" data-required-score="40">
+            <span>White</span>
+            <div class="lock-icon">🔒</div>
+            <div class="score-requirement">Score: 40</div>
+        </div>
+        <div class="tab locked" data-color="#FFA500" data-required-score="50">
+            <span>Gold</span>
+            <div class="lock-icon">🔒</div>
+            <div class="score-requirement">Score: 50</div>
+        </div>
+        <div class="tab locked" data-color="#FF1493" data-required-score="60">
+            <span>Rainbow</span>
+            <div class="lock-icon">🔒</div>
+            <div class="score-requirement">Score: 60</div>
+        </div>
+        <div class="tab locked" data-color="#000000" data-required-score="20" data-hard-mode="true">
+            <span>Black</span>
+            <div class="lock-icon">🔒</div>
+            <div class="score-requirement">Score: 20 (Hard Mode)</div>
+        </div>
+        <div class="tab locked" data-color="#00FF00" data-passcode="2610">
+            <span>Alien Bird</span>
+            <div class="lock-icon">🔒</div>
+            <div class="score-requirement">Enter Passcode</div>
+        </div>
+        <div class="tab locked" data-color="#8B0000" data-required-score="100">
+            <span>Demon Bird</span>
+            <div class="lock-icon">🔒</div>
+            <div class="score-requirement">Score: 100</div>
+        </div>
+        <div class="tab locked" data-color="#FF4500" data-required-score="1200" data-chase-required="true">
+            <span>Big Bird</span>
+            <div class="lock-icon">🔒</div>
+            <div class="score-requirement">Catch the Big Bird!</div>
+        </div>
+    </div>
+    <div id="pauseMenu" class="pause-menu">
+        <h2>Game Paused</h2>
+        <div class="pause-options">
+            <button class="pause-button resume">▶️ Resume</button>
+            <button class="pause-button restart">🔄 Restart</button>
+            <button class="pause-button quit">🚪 Quit</button>
+            <button class="pause-button sound-toggle">🔊 Sound: On</button>
+            <button class="pause-button hard-mode-toggle">🎯 Hard Mode: Off</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+    <audio id="jumpSound" src="assets/11L-chicken_bird_like_so-1743147382955.mp3" preload="auto"></audio>
+</body>
+</html> 
